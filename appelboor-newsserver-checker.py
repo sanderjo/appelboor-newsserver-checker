@@ -21,7 +21,7 @@ def checkserver(HOST):
     conn = context.wrap_socket(sock, server_hostname=HOST)
     try:
         conn.connect((HOST, PORT))
-        return handle(conn)
+        return "OK:" + handle(conn)
     except:
         return "*** no connection possible"
     finally:
